@@ -121,6 +121,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'preservim/nerdtree'
 " Vim notetaking
 Plug 'vimwiki/vimwiki'
+" Vim React
+Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
 call plug#end()
 " ############################################################################
