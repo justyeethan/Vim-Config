@@ -30,7 +30,7 @@ set mouse=a
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed " for OSX
 else
-  set clipboard=unnamedplus " for Linux
+  set clipboard=unnamedplus " for Linux and WSL2
 endif
 
 " Parenthesis coloring
@@ -113,8 +113,6 @@ Plug 'chun-yang/auto-pairs'
 " Bar theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Ayu color scheme
-Plug 'ayu-theme/ayu-vim'
 
 " Emmet for html
 Plug 'mattn/emmet-vim'
