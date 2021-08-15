@@ -1,7 +1,3 @@
-" Source vim_theme for colorscheme
-" source ./jellybeans.vim
-colorscheme jellybeans
-
 " ############################################################################
 " General and standard settings:
 " ############################################################################
@@ -62,13 +58,31 @@ set completeopt-=noselect
 set cursorline
 " hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" ############################################################################
+" Colorscheme Access
+" ############################################################################
+
+" Source vim_theme for colorscheme
+" source ./jellybeans.vim
+" colorscheme jellybeans
+
+" Badwolf
+" colorscheme badwolf
+
+colorscheme material
+if (has('termguicolors'))
+  set termguicolors
+endif
+let g:material_theme_style = 'ocean-community'
+let g:material_terminal_italics = 1
 "#############################################################################
 " Sets status bar
 " ############################################################################
 " let g:airline_theme='papercolor'
 " let g:airline_theme='luna'
 
-" let g:airline_theme='jellybeans'
+let g:airline_theme='material'
 
 " Airline
 " Enable Airline
@@ -84,6 +98,7 @@ if !exists('g:airline_symbols')
 endif
 
 
+
 " Airline symbols
 
 let g:airline_left_sep = ''
@@ -96,6 +111,36 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+" let g:airline_left_sep = '»'
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '«'
+" let g:airline_right_sep = '◀'
+" let g:airline_symbols.linenr = '␊'
+" let g:airline_symbols.linenr = '␤'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.paste = 'Þ'
+" let g:airline_symbols.paste = '∥'
+" let g:airline_symbols.whitespace = 'Ξ'
+" 
+" " airline symbols
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
 " ############################################################################
 " sets the color for where the line should end.
 " ############################################################################
@@ -113,7 +158,6 @@ Plug 'chun-yang/auto-pairs'
 " Bar theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " Emmet for html
 Plug 'mattn/emmet-vim'
 " On-demand loading
@@ -131,6 +175,9 @@ Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
 " Vim React
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+
+" Material Colorscheme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 call plug#end()
 " ############################################################################
@@ -169,4 +216,5 @@ let g:user_emmet_leader_key='\'
 " Prettier Config
 " ############################################################################
 let g:prettier#autoformat_require_pragma = 0
+
 
