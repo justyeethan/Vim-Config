@@ -33,8 +33,7 @@ endif
 hi MatchParen cterm=bold ctermbg=none ctermfg=blue
 
 " Tabs controls
-autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufRead,BufNewFile *.css,*.js setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.js,*.sql setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -70,19 +69,23 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 " Badwolf
 " colorscheme badwolf
 
+" colorscheme molokai
+" let g:molokai_original = 1
+
 colorscheme material
 if (has('termguicolors'))
   set termguicolors
 endif
 let g:material_theme_style = 'ocean-community'
 let g:material_terminal_italics = 1
+
 "#############################################################################
 " Sets status bar
 " ############################################################################
 " let g:airline_theme='papercolor'
 " let g:airline_theme='luna'
 
-let g:airline_theme='material'
+" let g:airline_theme='material'
 
 " Airline
 " Enable Airline
@@ -133,7 +136,7 @@ endif
 " let g:airline_symbols.paste = '∥'
 " let g:airline_symbols.whitespace = 'Ξ'
 " 
-" " airline symbols
+" airline symbols
 " let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_right_sep = ''
@@ -176,10 +179,20 @@ Plug 'vimwiki/vimwiki'
 " Vim React
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
+" Colorizer for hex colorscheme
+Plug 'norcalli/nvim-colorizer.lua'
+
+
 " Material Colorscheme
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 call plug#end()
+
+" ############################################################################
+" Specific Plug Settings
+" ############################################################################
+" Colorizer
+" lua require'colorizer'.setup()
 " ############################################################################
 " Cursor Change
 " ############################################################################
@@ -217,4 +230,12 @@ let g:user_emmet_leader_key='\'
 " ############################################################################
 let g:prettier#autoformat_require_pragma = 0
 
-
+" python with virtualenv support
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'Scripts/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
