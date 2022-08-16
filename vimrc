@@ -144,12 +144,14 @@ endif
 " let g:airline_symbols.branch = ''
 " let g:airline_symbols.readonly = ''
 " let g:airline_symbols.linenr = ''
+
 " ############################################################################
 " sets the color for where the line should end.
 " ############################################################################
 set colorcolumn=80
 " highlight ColorColumn ctermbg=8 guibg=darkgrey
 highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+
 " ############################################################################
 " plugins:
 " ############################################################################
@@ -193,6 +195,7 @@ call plug#end()
 " ############################################################################
 " Colorizer
 " lua require'colorizer'.setup()
+
 " ############################################################################
 " Cursor Change
 " ############################################################################
