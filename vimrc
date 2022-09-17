@@ -33,8 +33,7 @@ endif
 hi MatchParen cterm=bold ctermbg=none ctermfg=blue
 
 " Tabs controls
-autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufRead,BufNewFile *.css,*.js setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.js,*.sql setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -75,13 +74,14 @@ if (has('termguicolors'))
 endif
 let g:material_theme_style = 'ocean-community'
 let g:material_terminal_italics = 1
+
 "#############################################################################
 " Sets status bar
 " ############################################################################
 " let g:airline_theme='papercolor'
 " let g:airline_theme='luna'
 
-let g:airline_theme='material'
+" let g:airline_theme='material'
 
 " Airline
 " Enable Airline
@@ -129,7 +129,7 @@ endif
 " let g:airline_symbols.paste = '∥'
 " let g:airline_symbols.whitespace = 'Ξ'
 " 
-" " airline symbols
+" airline symbols
 " let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_right_sep = ''
@@ -137,12 +137,14 @@ endif
 " let g:airline_symbols.branch = ''
 " let g:airline_symbols.readonly = ''
 " let g:airline_symbols.linenr = ''
+
 " ############################################################################
 " sets the color for where the line should end.
 " ############################################################################
 set colorcolumn=80
 " highlight ColorColumn ctermbg=8 guibg=darkgrey
 highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+
 " ############################################################################
 " plugins:
 " ############################################################################
