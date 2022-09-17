@@ -1,5 +1,10 @@
 {
   "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+    },
     "go": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
@@ -7,5 +12,10 @@
       "filetypes": ["go"]
     }
   },
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "python.jediPath": "/Users/ethan/miniforge3/lib/python3.9/site-packages",
+  "python.jediEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

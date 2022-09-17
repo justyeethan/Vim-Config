@@ -69,7 +69,6 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Badwolf
 " colorscheme badwolf
-
 colorscheme material
 if (has('termguicolors'))
   set termguicolors
@@ -97,10 +96,7 @@ if !exists('g:airline_symbols')
      let g:airline_symbols = {}
 endif
 
-
-
 " Airline symbols
-
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -176,10 +172,24 @@ Plug 'vimwiki/vimwiki'
 " Vim React
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
+" Colorizer for hex colorscheme
+Plug 'norcalli/nvim-colorizer.lua'
+
 " Material Colorscheme
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
+" auto-Indent Python
+Plug 'vim-scripts/indentpython.vim'
+
 call plug#end()
+
+" ############################################################################
+" Specific Plug Settings
+" ############################################################################
+" Colorizer
+" lua require'colorizer'.setup()
+set encoding=utf-8
+
 " ############################################################################
 " Cursor Change
 " ############################################################################
@@ -217,4 +227,12 @@ let g:user_emmet_leader_key='\'
 " ############################################################################
 let g:prettier#autoformat_require_pragma = 0
 
-
+" python with virtualenv support
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"   project_base_dir = os.environ['VIRTUAL_ENV']
+"   activate_this = os.path.join(project_base_dir, 'Scripts/activate_this.py')
+"   execfile(activate_this, dict(__file__=activate_this))
+" EOF
