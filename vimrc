@@ -67,19 +67,23 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 " colorscheme jellybeans
 
 " Badwolf
-" colorscheme badwolf
-colorscheme material
+colorscheme badwolf
+" colorscheme material
 if (has('termguicolors'))
   set termguicolors
 endif
 let g:material_theme_style = 'ocean-community'
 let g:material_terminal_italics = 1
 
+
 "#############################################################################
 " Sets status bar
 " ############################################################################
 " let g:airline_theme='papercolor'
 " let g:airline_theme='luna'
+" let g:airline_theme='badwolf'
+" let g:airline_theme='minimalist'
+let g:airline_theme='distinguished'
 
 " let g:airline_theme='material'
 
@@ -182,6 +186,9 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 " auto-Indent Python
 Plug 'vim-scripts/indentpython.vim'
+
+" Plugin for pdf support
+Plug 'makerj/vim-pdf'
 
 call plug#end()
 
