@@ -12,6 +12,7 @@
       "filetypes": ["go"]
     }
   },
+  "diagnostic.virtualText": true,
   "suggest.noselect": false,
   "python.jediPath": "/Users/ethan/miniforge3/lib/python3.9/site-packages",
   "python.jediEnabled": true,
