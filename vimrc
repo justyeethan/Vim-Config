@@ -150,7 +150,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 
 " ############################################################################
-" plugins:
+" Plugins:
 " ############################################################################
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
