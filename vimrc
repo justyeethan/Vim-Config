@@ -187,6 +187,9 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " auto-Indent Python
 Plug 'vim-scripts/indentpython.vim'
 
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Plugin for pdf support
 Plug 'makerj/vim-pdf'
 
