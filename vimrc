@@ -33,7 +33,7 @@ endif
 hi MatchParen cterm=bold ctermbg=none ctermfg=blue
 
 " Tabs controls
-autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.js,*.sql setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.htm,*.html,*.css,*.jsx,*.js,*.sql setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -190,8 +190,6 @@ Plug 'vim-scripts/indentpython.vim'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plugin for pdf support
-Plug 'makerj/vim-pdf'
 
 call plug#end()
 
@@ -248,3 +246,11 @@ let g:prettier#autoformat_require_pragma = 0
 "   activate_this = os.path.join(project_base_dir, 'Scripts/activate_this.py')
 "   execfile(activate_this, dict(__file__=activate_this))
 " EOF
+
+
+
+" ############################################################################
+" Other Conifg
+" ############################################################################
+nnoremap <silent> <C-f> :Files<CR>
+
