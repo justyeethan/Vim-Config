@@ -12,8 +12,13 @@
       "filetypes": ["go"]
     }
   },
+  "java.configuration.runtimes": [
+      {
+          "name": "JavaSE-10",
+          "path": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin"
+      }
+  ],
   "diagnostic.virtualText": true,
-  "suggest.enablePreselect": true,
   "suggest.noselect": false,
   "python.jediPath": "/Users/ethan/miniforge3/lib/python3.9/site-packages",
   "python.jediEnabled": true,

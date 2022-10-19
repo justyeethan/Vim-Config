@@ -169,6 +169,12 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 " Autocomplete COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Python jedi coc package
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+
+
+
 " Prettier plugin
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Nerd Tree is a way to select files from vim
@@ -253,4 +259,9 @@ let g:prettier#autoformat_require_pragma = 0
 " Other Conifg
 " ############################################################################
 nnoremap <silent> <C-f> :Files<CR>
+
+" Select the current highlighted selection in autocomplete
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+" Navigate between completion list
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
